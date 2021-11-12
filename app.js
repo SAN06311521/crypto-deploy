@@ -22,6 +22,8 @@ app.use(express.json())
 const userRouter = require('./routes/users')
 app.use('/users', userRouter)
 
-app.listen(9000, () => {
+const port = process.env.PORT || 9000;
+
+app.listen(port, () => {
     console.log('Server started')
 })

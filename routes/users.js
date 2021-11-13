@@ -8,6 +8,7 @@ router.get('/', async(req, res) => {
         console.log(users);
         res.json(users)
     } catch (err) {
+        console.log(err);
         res.send('Error ' + err)
     }
 })
@@ -17,6 +18,7 @@ router.get('/:id', async(req, res) => {
         const user = await User.findById(req.params.id);
         res.json(user)
     } catch (err) {
+        console.log(err);
         res.send('Error ' + err)
     }
 })
@@ -37,6 +39,7 @@ router.post('/', async(req,res) => {
         const a1 = await user.save()
         res.json(a1)
     } catch(err){
+        console.log(err);
         res.send('Error')
     }
 })
@@ -48,6 +51,7 @@ router.patch('/:id', async(req, res) => {
         const a1 = await user.save()
         res.json(a1)
     }catch(err){
+        console.log(err);
         res.send('Error')
     }
 })

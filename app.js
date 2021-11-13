@@ -1,3 +1,4 @@
+var cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const url = 'mongodb://localhost/UserDBex'
@@ -5,6 +6,7 @@ const url = 'mongodb://localhost/UserDBex'
 const DB = 'mongodb+srv://sanya:SanyaJain@cluster0.hffcg.mongodb.net/cryptoData?retryWrites=true&w=majority'
 
 const app = express()
+app.use(cors())
 
 mongoose.connect(DB, {
     useNewUrlParser: true,

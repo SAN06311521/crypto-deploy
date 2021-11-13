@@ -2,36 +2,28 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
     firstName: {
-        type: String,
-        required: true
+        type: String
     },
     lastName: {
-        type: String,
-        required: true
+        type: String
     },
     email: {
-        type: String,
-        required: true
+        type: String
     },
     cryptoCoin: {
-        type: String,
-        required: true
+        type: String
     },
     price: {
-        type: String,
-        required: true
+        type: String
     },
     criticalValuePrice: {
-        type: String,
-        required: true
+        type: String
     },
     percentage: {
-        type: String,
-        required: true
+        type: String
     },
     criticalValuePercent: {
-        type: String,
-        required: true
+        type: String
     }
 })
 
